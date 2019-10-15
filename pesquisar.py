@@ -1,4 +1,7 @@
 import sqlite3
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
 
 #criar tabela
 conn = sqlite3.connect('DADOS.db')
@@ -7,8 +10,7 @@ cursor.execute(
 """
   CREATE TABLE IF NOT EXISTS DADOS (
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-        locais TEXT NOT NULL,
-        instancias TEXT NOT NULL
+        locais TEXT NOT NULL
    )
 """)
 
@@ -21,22 +23,17 @@ INSERT INTO DADOS (locais)
 VALUES ('Rio de Janeiro')
 """)
 conn.commit()
-
 conn.close()
+
 #Buscar
 def Pesquisa_local():
-    db=input('banco de dados')
-    user=input('usuario')
-    table=input('tabela')
+    db=str(request.form('banco de dados'))
+    table=str(request.form('tabela'))
     conn = sqlite3.connect(db)
     cursor = conn.cursor()
-    tabela=cursor.execute('select * from {0}.{1}'.format(user,table))
+    tabela=cursor.execute('select * from {0}'.format(table))
     conn.close()
     return tabela
 
-'''def busca(path):
-    dir(path)
-    from index import
-    pass
 
-busca('C:\\Bismarck\\Prog\\flask\\')'''
+app.run()
