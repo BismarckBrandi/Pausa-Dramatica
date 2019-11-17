@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Carme&display=swap" rel="stylesheet">
+    <title>PausaDramatica</title>
+</head>
+
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt='PausaDramatica' id="logo"></img>
+        {%if vLogin == 0%}
+        <a href="/login"><img src="{{ url_for('static', filename='img/login1.png') }}" alt='Login' id="login"></img></a>
+        {%else%}
+        <!--<p>Logado como {{usr}}</p>
+        -->
+        <style>
+            .dropbtn {
+              height: 50px;
+              box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+              border: 0;
+              border-radius: 4px;
+              background: #ffa802;
+              font-family: 'Carme', sans-serif;
+              cursor: pointer;
+            }
+
+            .dropbtn:hover, .dropbtn:focus {
+              background-color: #2980B9;
+            }
+
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
+
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f1f1f1;
+              min-width: 160px;
+              overflow: auto;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+
+            .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+            }
+
+            .dropdown a:hover {background-color: #ddd;}
+
+            .show {display: block;}
+            </style>
+
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Logado como {{usr}} ({{usrList[0][4]}})</button>
+              <!--<button onclick="myFunction()" class="dropbtn"><img src="{{ url_for('static', filename='img/login1.png') }}" alt='Login' id="login" /></button>-->
+              <div id="myDropdown" class="dropdown-content">
+                <a href="/login">Logout</a>
+                <a href="#">Ver perfil</a>
+                {%if usrList[0][4] == 'Guia' %}
+                <a href="/oferecer">Oferecer passeio</a>
+                {%endif%}
+              </div>
+            </div>
+
+            <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+
+        <!--<a href="/login"><img src="{{ url_for('static', filename='img/login1.png') }}" alt='Login' id="login"></img></a>
+        -->
+            {%endif%}
+        <!--
+        <button>Entrar</button>
+        <button>Registrar</button>
+        -->
+         <div class="topnav">
+             <div class="search-container">
+                <form action="/action_page.php">
+                <input type="text" placeholder="Pesquisar locais" name="Local">
+                </form>
+            </div>
+         </div>
+    </header>
+
+<body>
+
+</body>
+</html>

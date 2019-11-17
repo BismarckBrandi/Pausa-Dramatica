@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Carme&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-container">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt='PausaDramatica' id="logo"></img>
+        <form action="/login" method="POST">
+            <input placeholder="  Usuario" name="username"/>
+            <input type="password" placeholder="  Senha" name="senha"/>
+            <!--
+            <input type="email" placeholder="  Email">
+            -->
+            <input id="button" type="submit" value="Logar">
+            <a href="/registrar"><strong>Clique aqui para registrar</strong></a>
+        </form>
+    </div>
+</body>
+</html>

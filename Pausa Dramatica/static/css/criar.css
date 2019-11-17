@@ -1,0 +1,61 @@
+.criar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+body{
+    font-family: 'Carme', sans-serif;
+}
+.criar-container form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-top: -30px;
+
+}
+.criar-container form #button{
+    height: 35px;
+    margin-top: 5px;
+    background-color: #304657;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #FFF;
+    border: 0;
+    font-size: 16px;
+}
+
+.criar-container form input {
+    height: 30px;
+    border-radius: 8px;
+    margin-top: 5px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 5px 0;
+    font-size: 16px;
+}
+.criar-container form textarea {
+    border-radius: 8px;
+    margin-top: 5px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 5px 0;
+    font-size: 16px;
+}
+#logo {
+    height: 200px;
+    width: 200px;
+}
+
+.reg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a {
+    text-decoration: none
+}

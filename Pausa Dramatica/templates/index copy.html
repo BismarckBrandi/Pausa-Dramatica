@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Carme&display=swap" rel="stylesheet">
+    <title>PausaDramatica</title>
+</head>
+
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt='PausaDramatica' id="logo"></img>
+        <a href="/login"><img src="{{ url_for('static', filename='img/login1.png') }}" alt='Login' id="login"></img></a>
+        <!--
+        <button>Entrar</button>
+        <button>Registrar</button>
+        -->
+    </header>
+    <div class="main-container">
+        <ul>
+            <li>
+                <img src="http://visit.rio/wp-content/uploads/2015/08/6025941768_8bdcc85c73_o-500x500.jpg" alt="" />
+                <footer>
+                    <strong>Parque Lage</strong>
+                    <p>Que tal passar uma tarde relaxante sob o “sovaco do Cristo”? Assim é chamado pelos locais o Parque Lage devido à sua localização bem debaixo do braço direito da estátua do Cristo Redentor.</p>
+                </footer>
+
+                <div class="buttons">
+                    <button type="button">
+                        <img src="{{ url_for('static', filename='img/salvar.svg') }}" />
+                    </button>
+                    <button type="button">
+                        <img src="{{ url_for('static', filename='img/like.svg') }}" />
+                    </button>
+
+                </div>
+                <li>
+                    <img src="http://visit.rio/wp-content/uploads/2015/10/28128553253_4e763a380e_k-500x500.jpg" alt="" />
+                    <footer>
+                        <strong>Cristo Redentor</strong>
+                        <p>No alto do morro do Corcovado está instalado o Cristo Redentor, um dos pontos turísticos mais procurados do Rio de Janeiro. Maior e mais famosa escultura Art Déco do mundo, a estátua do Cristo Redentor começou a ser planejada em 1921 e foi desenvolvida pelo engenheiro Heitor da Silva Costa ao longo de cinco anos de trabalho, de 1926 à 1931, o ano de inauguração do monumento.</p>
+                    </footer>
+    
+                    <div class="buttons">
+                        <button type="button">
+                            <img src="{{ url_for('static', filename='img/salvar.svg') }}" />
+                        </button>
+                        <button type="button">
+                            <img src="{{ url_for('static', filename='img/like.svg') }}" />
+                        </button>
+    
+                    </div>
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/originals/9e/de/7b/9ede7b07fda78b164a3a805327351ce7.jpg" alt="" />
+                    <footer>
+                        <strong>Catedral de Notre-Dame</strong>
+                        <p>A Catedral de Notre-Dame de Paris é uma das mais antigas catedrais francesas em estilo gótico. Iniciada sua construção no ano de 1163, é dedicada à Virgem Maria, mãe de Jesus, e situa-se na Île de la Cité em Paris, rodeada pelas águas do rio Sena.</p>
+                    </footer>
+    
+                    <div class="buttons">
+                        <button type="button">
+                            <img src="{{ url_for('static', filename='img/salvar.svg') }}" />
+                        </button>
+                        <button type="button">
+                            <img src="{{ url_for('static', filename='img/like.svg') }}" />
+                        </button>
+    
+                    </div>
+                </li>
+                <li>
+                    <img src="https://asdistancias.files.wordpress.com/2015/11/img_20151028_151305.jpg" alt="" />
+                    <footer>
+                        <strong>Coliseu</strong>
+                        <p>Coliseu, também conhecido como Anfiteatro Flaviano, é um anfiteatro oval localizado no centro da cidade de Roma, capital da Itália. Construído com concreto e areia, é o maior anfiteatro já construído e está situado a leste do Fórum Romano</p>
+                    </footer>
+    
+                    <div class="buttons">
+                        <button type="button">
+                            <img src="{{ url_for('static', filename='img/salvar.svg') }}" />
+                        </button>
+                        <button type="button">
+                            <img src="{{ url_for('static', filename='img/like.svg') }}" />
+                        </button>
+    
+                    </div>
+                </li>
+                <li>
+                    <div class="add">
+                        <a href="/criar"><img src="{{ url_for('static', filename='img/add.svg') }}" alt='Criar' id="criar"></img></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="add">
+                        <button type="button">
+                            <img src="{{ url_for('static', filename='img/add.svg') }}" />
+                        </button>
+                    </div>
+                </li>
+        </ul>
+    </div>
+</body>
+
+</html>
